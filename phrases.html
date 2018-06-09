@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" type="text/css" href="home.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Yellowtail" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Josefin+Sans|Nunito|Pathway+Gothic+One|Quicksand|Raleway|Work+Sans" rel="stylesheet">
+    <title>SignAcademy</title>
+</head>
+<body>
+
+<!-- This code is for the navigation bar -->
+<div class="navbar" style="z-index:20">
+    <a href="quizzes.html">Quizzes</a>
+    <a href="lessons.html">Lessons</a>
+    <a href="aboutus.html">About Us</a>
+    <img onclick= "window.location.href = 'home.html'" src="Logo-Thumbnail/transparent%20logo.png" class="logo">
+</div>
+
+<div>
+    <h1 class="banner">
+        <img src="Logo-Thumbnail/Basic_Banner.png" style="width:100%">
+    </h1>
+</body>
+</head>
+</div>
+<br>
+
+
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="BasicCarousel" style="width:980px; margin:0 auto;">
+    <div class="w3-content w3-display-container">
+        <img class="mySlides" src="B_Phrases/Excuse_me.gif" style="width:100%">
+        <img class="mySlides" src="B_Phrases/Good_morning.gif" style="width:100%">
+        <img class="mySlides" src="B_Phrases/Good_Night.gif" style="width:100%">
+        <img class="mySlides" src="B_Phrases/Good_Afternoon.gif" style="width:100%">
+        <img class="mySlides" src="B_Phrases/Goodbye.gif" style="width:100%">
+        <img class="mySlides" src="B_Phrases/Hello(Formal).gif" style="width:100%">
+        <img class="mySlides" src="B_Phrases/Hello(informal).gif" style="width:100%">
+        <img class="mySlides" src="B_Phrases/How_are_you.gif" style="width:100%">
+        <img class="mySlides" src="B_Phrases/I_love_you.gif" style="width:100%">
+        <img class="mySlides" src="B_Phrases/My_name_is.gif" style="width:100%">
+        <img class="mySlides" src="B_Phrases/Nice_to_meet_you.gif" style="width:100%">
+        <img class="mySlides" src="B_Phrases/No.gif" style="width:100%">
+        <img class="mySlides" src="B_Phrases/Please.gif" style="width:100%">
+        <img class="mySlides" src="B_Phrases/Sorry.gif" style="width:100%">
+        <img class="mySlides" src="B_Phrases/Thank_you.gif" style="width:100%">
+        <img class="mySlides" src="B_Phrases/What's_your_name.gif" style="width:100%">
+        <img class="mySlides" src="B_Phrases/Yes.gif" style="width:100%">
+        <img class="mySlides" src="B_Phrases/You're_welcome.gif" style="width:100%">
+
+
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1);move();">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1);move2();">&#10095;</button>
+    </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
+<center>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600,800,900" rel="stylesheet" type="text/css">
+    <div id="container"></div>
+</center>
+<br>
+<script type="text/javascript" src="https://rawgit.com/kimmobrunfeldt/progressbar.js/1.0.0/dist/progressbar.js"></script>
+<script>
+// progressbar.js@1.0.0 version is used
+// Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
+
+var bar = new ProgressBar.SemiCircle(container, {
+  strokeWidth: 6,
+  color: '#FFEA82',
+  trailColor: '#eee',
+  trailWidth: 1,
+  easing: 'easeInOut',
+  duration: 1400,
+  svgStyle: null,
+  text: {
+    value: '',
+    alignToBottom: false
+  },
+  from: {color: '#FFEA82'},
+  to: {color: '#ED6A5A'},
+  // Set default step function for all animate calls
+  step: (state, bar) => {
+    bar.path.setAttribute('stroke', state.color);
+    var value = Math.round(bar.value() * 100);
+  //if there's no progress, there is no text
+    if (value === 0) {
+      bar.setText('');
+  //but if there is, write down the value
+    } else {
+      bar.setText(value);
+    }
+//changes the color of the bar
+    bar.text.style.color = state.color;
+  }
+});
+//some simple styling of the value
+bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+bar.text.style.fontSize = '2rem';
+
+x=0
+//IMPORTANT
+//change y to 1 divided by the number of questions there are!!!!!
+y=0.05288235
+
+function move(){
+x=x-y
+bar.animate(x);  // Number from 0.0 to 1.0
+}
+
+function move2(){
+x = x+y
+bar.animate(x);  // Number from 0.0 to 1.0
+}
+</script>
+<br>
+
+<div class="BasicPara" style="width:980px; margin:0 auto;">
+    <br>
+    <h6 class="header"><font color="#FFFFFF">General</h6>
+    <p class="para">If you don't know how to sign something, don't immediately resort to fingerspelling, try to communicate using a combination of signs that you already know.</p>
+    <br>
+    <h6 class="header">Names</h6>
+    <p class="para">Everyone has a name that they can fingerspell, but not everyone has a sign name. A sign name is a special sign given to someone to identify them. If you wanted to talk about someone, it's a lot easier to use one sign than to spell their name over and over again. As a hearing person, a sign name can be given to you by a deaf person once they get to know you better. For example, after knowing them for a while, a deaf friend might give you the sign name of "sorry", but with a "B" instead of a fist, because you tend to apologize a lot and your name starts with a B.</p>
+    <p class="para">Even if you know the perfect sign name for you, you cannot give yourself a sign name. They are given as gifts, so you can't choose them on your own. Some people may not even have one, as people with names 4 letters or less aren't as hard to spell.</p>
+    <br>
+    <h6 class="header">Meeting a deaf person</h6>
+    <p class="para">If you meet a deaf person, don't assume that they know how to lipread or want to practice ASL with you. People in the deaf community are still people, and might want to just get on with their lives! If they can lipread, make sure not to obstruct their view with your hands, food, gum, or anything else that might get in the way. Eye contact is important, but so is speaking clearly and at a normal pace. Speaking too slowly might actually make your lips harder to read!</p>
+    <br>
+    <h6 class="header">Grammar</h6>
+    <p class="para">ASL doesn't use verbs that indicate a state of being (am, is, are, was, were) or articles (a, an, the). Here's a link to learn more about sentence structure: <a href="http://www.dummies.com/languages/american-sign-language/how-to-structure-sentences-in-american-sign-language/">HOW TO STRUCTURE SENTENCES IN AMERICAN SIGN LANGUAGE</a></p>
+    <br>
+</div>
+
+<br><br>
+<div class=basicButton style="margin:0 auto;">
+    <br>
+    <font color="#FF7F4F"><p class="testlink"><a href="phrasesquiz.html" class="testlink">Take the Quiz!</a></p>
+</div>
+<br><br>
+
+</body>
+</html>
+
+
+
+</html>

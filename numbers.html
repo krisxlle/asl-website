@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" type="text/css" href="home.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Yellowtail" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Josefin+Sans|Nunito|Pathway+Gothic+One|Quicksand|Raleway|Work+Sans" rel="stylesheet">
+    <title>SignAcademy</title>
+</head>
+<body>
+
+<!-- This code is for the navigation bar -->
+<div class="navbar" style="z-index:20">
+    <a href="quizzes.html">Quizzes</a>
+    <a href="lessons.html">Lessons</a>
+    <a href="aboutus.html">About Us</a>
+    <img onclick= "window.location.href = 'home.html'" src="Logo-Thumbnail/transparent%20logo.png" class="logo">
+</div>
+
+<h1 class="banner">
+    <img src="Logo-Thumbnail/Numbers_Banner.png" style="width:100%">
+</h1>
+</body>
+
+
+
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+
+<div class="w3-content w3-display-container">
+    <img class="mySlides" src="Numbers/1.JPG" style="width:100%">
+    <img class="mySlides" src="Numbers/2.jpg" style="width:100%">
+    <img class="mySlides" src="Numbers/3.JPG" style="width:100%">
+    <img class="mySlides" src="Numbers/4.jpg" style="width:100%">
+    <img class="mySlides" src="Numbers/5.JPG" style="width:100%">
+    <img class="mySlides" src="Numbers/6.jpg" style="width:100%">
+    <img class="mySlides" src="Numbers/7.JPG" style="width:100%">
+    <img class="mySlides" src="Numbers/8.jpg" style="width:100%">
+    <img class="mySlides" src="Numbers/9.JPG" style="width:100%">
+    <img class="mySlides" src="Numbers/10.jpg" style="width:100%">
+    <img class="mySlides" src="Numbers/20.gif" style="width:100%">
+    <img class="mySlides" src="Numbers/30.gif" style="width:100%">
+    <img class="mySlides" src="Numbers/40.gif" style="width:100%">
+    <img class="mySlides" src="Numbers/50.gif" style="width:100%">
+    <img class="mySlides" src="Numbers/60.gif" style="width:100%">
+    <img class="mySlides" src="Numbers/80.gif" style="width:100%">
+    <img class="mySlides" src="Numbers/90.gif" style="width:100%">
+    <img class="mySlides" src="Numbers/100.gif" style="width:100%">
+    <img class="mySlides" src="Numbers/172.gif" style="width:100%">
+    <img class="mySlides" src="Numbers/1000.gif" style="width:100%">
+    <img class="mySlides" src="Numbers/2,169.gif" style="width:100%">
+    <img class="mySlides" src="Numbers/10,000.gif" style="width:100%">
+    <img class="mySlides" src="Numbers/100,000.gif" style="width:100%">
+    <img class="mySlides" src="Numbers/1,000,000.gif" style="width:100%">
+
+    <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1);move();">&#10094;</button>
+    <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1);move2();">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
+<center>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600,800,900" rel="stylesheet" type="text/css">
+    <div id="container"></div>
+</center>
+<br>
+<script type="text/javascript" src="https://rawgit.com/kimmobrunfeldt/progressbar.js/1.0.0/dist/progressbar.js"></script>
+<script>
+// progressbar.js@1.0.0 version is used
+// Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
+
+var bar = new ProgressBar.SemiCircle(container, {
+  strokeWidth: 6,
+  color: '#FFEA82',
+  trailColor: '#eee',
+  trailWidth: 1,
+  easing: 'easeInOut',
+  duration: 1400,
+  svgStyle: null,
+  text: {
+    value: '',
+    alignToBottom: false
+  },
+  from: {color: '#FFEA82'},
+  to: {color: '#ED6A5A'},
+  // Set default step function for all animate calls
+  step: (state, bar) => {
+    bar.path.setAttribute('stroke', state.color);
+    var value = Math.round(bar.value() * 100);
+  //if there's no progress, there is no text
+    if (value === 0) {
+      bar.setText('');
+  //but if there is, write down the value
+    } else {
+      bar.setText(value);
+    }
+//changes the color of the bar
+    bar.text.style.color = state.color;
+  }
+});
+//some simple styling of the value
+bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+bar.text.style.fontSize = '2rem';
+
+x=0
+//IMPORTANT
+//change y to 1 divided by the number of questions there are!!!!!
+y=0.04333333333
+
+function move(){
+x=x-y
+bar.animate(x);  // Number from 0.0 to 1.0
+}
+
+function move2(){
+x = x+y
+bar.animate(x);  // Number from 0.0 to 1.0
+}
+</script>
+
+<div class="numberPara" style="width:980px; margin:0 auto;">
+    <br>
+    <h6 class="header"><font color="#FFFFFF">Numbers 1-5</h6>
+    <p class="para">When done as isolated signs, numbers 1-5 are signed with the back of your hand facing the person you are signing to, but numbers 6-9 are signed with your palm facing out. However, when signing a series of numbers (ex: phone number) numbers 1-5 are also signed with your palm facing out.</p>
+    <br>
+    <h6 class="header">Multiple Digits</h6>
+    <p class="para">Longer numbers are signed the way you would say them in English. For example, "1842" would be signed as "18" then "42". Most people sign double numbers by bouncing your hand twice, moving left to right. All double-digit numbers are simply signed as the sign for the first digit, followed by the sign for the second digit (ex: 34 is signed as 3, 4.)</p>
+    <br>
+    <h6 class="header">The Teens</h6>
+    <p class="para"></p>The signs for 11-15 are very similar to the signs for 20, 30, 40, and 50. The <br>only difference is that the signs for the teens are made with the palm facing <br>inward, while the signs for the tens are made with the palm facing out.The <br>signs 16-19 are made by signing "10" and the single digit number in succession.</p>
+    <br>
+    <h6 class="header">
+        Practice by signing the following numbers:
+    </h6>
+    <ol class="paralist">
+        <li>13</li>
+        <li>17</li>
+        <li>24</li>
+        <li>55</li>
+        <li>76</li>
+        <li>120</li>
+        <li>267</li>
+        <li>1,182</li>
+        <li>10,130</li>
+        <li>110,000</li>
+        <br>
+        </font>
+</div>
+
+<div class=numButton style="margin:0 auto;">
+    <br>
+    <font color="#2B9ED8"><p class="testlink"><a href="numbersquiz.html" class="testlink">Take the Quiz!</a></p>
+        <br><br>
+</div>
+
+
+
+</body>
+</html>
+
+</html>

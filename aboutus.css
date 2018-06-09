@@ -1,0 +1,42 @@
+.article{
+width:750px;
+margin-left: auto;
+margin-right: auto;
+font-family: 'Work Sans', sans-serif;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #F0ECE9;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.935;
+  left:0
+}
+
+.navbar a {
+ background-color: #F0ECE9;
+ padding: 5px;
+ font-size: 29px;
+ color: black;
+ font-family: 'Dosis', sans-serif;
+ text-decoration: none;
+ float:right;
+ margin-right: 40px
+}
+
+.logo{
+width: 180px;
+height: 50px;
+float:left;
+padding-left: 10px;
+}
+
+.name {
+ margin-top: 70px;
+}
+
+
+.hello{
+    padding: 50px 50px 50px 50px;
+}

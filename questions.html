@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" type="text/css" href="home.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Yellowtail" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Josefin+Sans|Nunito|Pathway+Gothic+One|Quicksand|Raleway|Work+Sans" rel="stylesheet">
+    <title>SignAcademy</title>
+</head>
+<body>
+
+<!-- This code is for the navigation bar -->
+<div class="navbar" style="z-index:20">
+    <a href="quizzes.html">Quizzes</a>
+    <a href="lessons.html">Lessons</a>
+    <a href="aboutus.html">About Us</a>
+    <img onclick= "window.location.href = 'home.html'" src="Logo-Thumbnail/transparent%20logo.png" class="logo">
+</div>
+
+
+
+<h1 class="banner">
+    <img src="Logo-Thumbnail/Questions_Banner.png" style="width:100%">
+</h1>
+</body>
+</head>
+
+
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+
+<div class="w3-content w3-display-container">
+    <img class="mySlides" src="Questions/Are_you_deaf.gif" style="width:100%">
+    <img class="mySlides" src="Questions/Are_you_hearing.gif" style="width:100%">
+    <img class="mySlides" src="Questions/How1.gif" style="width:100%">
+    <img class="mySlides" src="Questions/How2.gif" style="width:100%">
+    <img class="mySlides" src="Questions/Huh.gif" style="width:100%">
+    <img class="mySlides" src="Questions/I_don't_understand.gif" style="width:100%">
+    <img class="mySlides" src="Questions/I_only_know_a_few_basic_signs.gif" style="width:100%">
+    <img class="mySlides" src="Questions/Please_fingerspell_again.gif" style="width:100%">
+    <img class="mySlides" src="Questions/Please_sign_again.gif" style="width:100%">
+    <img class="mySlides" src="Questions/Please_sign_slower.gif" style="width:100%">
+    <img class="mySlides" src="Questions/There_is_no_sign_for_it_you_need_to _spell.gif" style="width:100%">
+    <img class="mySlides" src="Questions/What.gif" style="width:100%">
+    <img class="mySlides" src="Questions/What_did_they_say.gif" style="width:100%">
+    <img class="mySlides" src="Questions/What_does_that_mean.gif" style="width:100%">
+    <img class="mySlides" src="Questions/When.gif" style="width:100%">
+    <img class="mySlides" src="Questions/Where.gif" style="width:100%">
+    <img class="mySlides" src="Questions/Where_is_the_bathroom.gif" style="width:100%">
+    <img class="mySlides" src="Questions/Who.gif" style="width:100%">
+    <img class="mySlides" src="Questions/Why.gif" style="width:100%">
+    <img class="mySlides" src="Questions/Write_it_please.gif" style="width:100%">
+
+
+    <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1);move();">&#10094;</button>
+    <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1);move2();">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+
+</script>
+<center>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600,800,900" rel="stylesheet" type="text/css">
+    <div id="container"></div>
+</center>
+<br>
+<script type="text/javascript" src="https://rawgit.com/kimmobrunfeldt/progressbar.js/1.0.0/dist/progressbar.js"></script>
+<script>
+// progressbar.js@1.0.0 version is used
+// Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
+
+var bar = new ProgressBar.SemiCircle(container, {
+  strokeWidth: 6,
+  color: '#FFEA82',
+  trailColor: '#eee',
+  trailWidth: 1,
+  easing: 'easeInOut',
+  duration: 1400,
+  svgStyle: null,
+  text: {
+    value: '',
+    alignToBottom: false
+  },
+  from: {color: '#FFEA82'},
+  to: {color: '#ED6A5A'},
+  // Set default step function for all animate calls
+  step: (state, bar) => {
+    bar.path.setAttribute('stroke', state.color);
+    var value = Math.round(bar.value() * 100);
+  //if there's no progress, there is no text
+    if (value === 0) {
+      bar.setText('');
+  //but if there is, write down the value
+    } else {
+      bar.setText(value);
+    }
+//changes the color of the bar
+    bar.text.style.color = state.color;
+  }
+});
+//some simple styling of the value
+bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+bar.text.style.fontSize = '2rem';
+
+x=0
+//IMPORTANT
+//change y to 1 divided by the number of questions there are!!!!!
+y=0.05263157
+
+function move(){
+x=x-y
+bar.animate(x);  // Number from 0.0 to 1.0
+}
+
+function move2(){
+x = x+y
+bar.animate(x);  // Number from 0.0 to 1.0
+}
+</script>
+
+<div class="QuestPara" style="width:980px; margin:0 auto;">
+    <br>
+    <h6 class="header"><font color="#FFFFFF">General</h6>
+    <p class="para">Yes or no questions such as "Are you deaf?", are signed with your eyebrows raised. Questions with the 5 W's (Who, What, When, Where, Why + How) are signed with your eyebrows down. This indicates that you are asking a question and expect a longer response than "yes" or "no".</p>
+    <br>
+    </font>
+</div>
+
+<br><br>
+<div class=questButton style="margin:0 auto;">
+    <br>
+    <font color="#FF6161"><p class="testlink"><a href="questionsquiz.html" class="testlink">Take the Quiz!</a></p>
+</div>
+<br><br>
+
+</body>
+</html>
+
+</html>

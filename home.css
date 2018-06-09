@@ -1,0 +1,249 @@
+
+body {
+      text-align: center;
+      background: white;
+      background-size: cover;
+      background-position: center;
+      font-family: 'Work Sans', sans-serif;
+      border: 10px;
+      }
+.desc {
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 31px;
+  background-color: white;
+  border: 2px solid #92D1C3;
+  border-radius: 20px;
+  margin-top: 30px;
+  }
+
+.gwc{
+    width: 230px;
+    height:120px;
+    padding-top: 80px;
+}
+
+.desc {
+ width:750px;
+margin-left: auto;
+margin-right: auto;
+}
+
+
+/*Code for basic phrases header text */
+
+
+.BasicPara{
+    background-color: #FF7F4F;
+    font: #C2FBFF;
+}
+
+.AlphaPara{
+    background-color: #273B7A;
+    font: #D35933;
+
+}
+
+.numberPara{
+    background-color: #2B9ED8;
+    font: #EA348B;
+}
+
+.QuestPara{
+    background-color: #FF6161;
+    font: #121149;
+}
+
+.basicButton{
+    background-color: #121149;
+    border: 5px solid #366796;
+    border-radius: 50%;
+    display:block;
+    height: 160px;
+    width: 160px;
+}
+
+.abcButton{
+     background-color: #FFC61B;
+     font: #273B7A;
+     border: 5px solid #FEE187;
+     border-radius: 50%;
+     display:block;
+     height: 160px;
+     width: 160px;
+}
+
+.questButton{
+     background-color: #FFEDB5;
+     border: 5px solid #FF6161;
+     border-radius: 50%;
+     display:block;
+     height: 160px;
+     width: 160px;
+}
+
+.numButton{
+     background-color: #FFC61B;
+     border: 5px solid #CFDBE6;
+     border-radius: 50%;
+     display:block;
+     height: 160px;
+     width: 160px;
+}
+
+
+.tabs li{background-color: #F0ECE9;
+        padding: 15px;
+        font-size: 29px;
+        margin-right: 29px;
+        color: black;
+        font-family: 'Dosis', sans-serif;
+        text-decoration: none;}
+
+.navbar a: hover {background-color: #818181;
+        padding-top: 24px;
+        padding-bottom: 16px;
+        padding-left: 10px;
+            font-size: 29px;
+        margin-right: 29px;
+        color: black;
+        font-family: 'Dosis', sans-serif;
+        text-decoration: none;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #F0ECE9;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.935;
+  left:0
+  z-index:10;
+}
+
+.navbar a {
+ background-color: #F0ECE9;
+ padding: 5px;
+ font-size: 29px;
+ color: black;
+ font-family: 'Dosis', sans-serif;
+ text-decoration: none;
+ float:right;
+ margin-right: 40px
+}
+
+.logo{
+width: 180px;
+height: 50px;
+float:left;
+padding-left: 10px;
+}
+
+.credit {
+font-size: 10px;
+color:#F0ECE9;
+padding-top: 100px;
+padding-bottom: 10px;
+}
+
+.lessonpic{
+    width:15%;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.lepic2{
+    width:100%;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.lessoncap{
+   font-family: 'Quicksand', sans-serif;
+   font-size: 20px
+}
+
+.mySlides{
+z-index:inherit;
+}
+
+a {
+font-size: 15px;
+}
+
+.header{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+}
+
+.para{
+    padding-left: 200px;
+    padding-right: 200px;
+    text-align: left;
+    font-family: 'Work Sans', sans-serif;
+    text-indent: 20px;
+}
+
+.paralist{
+    padding-left: 275px;
+    padding-right: 200px;
+    text-align: left;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.testlink{
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+
+#container {
+  margin: 20px;
+  width: 200px;
+  height: 100px;
+}
+
+
+/* entypo */
+[class*="entypo-"]:before {
+   font-family: "entypo", sans-serif;
+}
+a {
+   text-decoration: none;
+}
+ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+.container {
+   margin: 0 auto;
+   padding: 20px 50px;
+   background: white;
+}
+
+.banner{
+    top:0;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+
+
+
+
+
+
+
+
+/* display:block;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  border: 1px solid red;*/
